@@ -4,7 +4,16 @@ import { Link } from 'react-router-dom';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import { TiShoppingCart } from 'react-icons/ti';
 import { BsPeopleCircle } from 'react-icons/bs';
-import { Header, Form, Navigation } from './styles';
+import {
+  Header,
+  Form,
+  Navigation,
+  Divulgation,
+  Content,
+  Product,
+  Partnerships,
+  Footer,
+} from './styles';
 
 import logoTest from '../../assets/logoTest.jpg';
 
@@ -35,6 +44,119 @@ const Home: React.FC = () => {
         <Link to="/">FEMININO</Link>
         <Link to="/">SOBRE</Link>
       </Navigation>
+      <Divulgation>
+        <img
+          src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1607665355698-home-sliderdesktop.jpg"
+          alt="Propaganda"
+        />
+      </Divulgation>
+      <Content>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+        <Product>
+          <img
+            src="https://http2.mlstatic.com/D_NQ_NP_976658-MLA41813920842_052020-V.webp"
+            alt="produto"
+          />
+          <div>
+            <h1>Ximomi Redmi Note 9s 128/gb Azul</h1>
+            <h2>R$ 1.999</h2>
+            <p>em 12x R$ 166,58 sem juros</p>
+          </div>
+        </Product>
+      </Content>
+      <Partnerships>
+        <h1>Lojas Parceiras</h1>
+        <div>
+          <img
+            src="https://http2.mlstatic.com/D_Q_NP_980431-MLA44194016476_112020-G.webp"
+            alt="Loja parceira"
+          />
+          <img
+            src="https://http2.mlstatic.com/D_Q_NP_980431-MLA44194016476_112020-G.webp"
+            alt="Loja parceira"
+          />
+          <img
+            src="https://http2.mlstatic.com/D_Q_NP_980431-MLA44194016476_112020-G.webp"
+            alt="Loja parceira"
+          />
+          <img
+            src="https://http2.mlstatic.com/D_Q_NP_980431-MLA44194016476_112020-G.webp"
+            alt="Loja parceira"
+          />
+          <img
+            src="https://http2.mlstatic.com/D_Q_NP_980431-MLA44194016476_112020-G.webp"
+            alt="Loja parceira"
+          />
+        </div>
+      </Partnerships>
+      <Footer>
+        <p> © Produzido por Guilherme Lopes</p>
+      </Footer>
     </>
   );
 };

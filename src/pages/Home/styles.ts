@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Header = styled.header`
   background-color: #ffffff;
@@ -53,7 +54,7 @@ export const Form = styled.form`
 `;
 
 export const Navigation = styled.nav`
-  background-color: #d1d1d1;
+  background-color: #3b92cc;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,8 +63,8 @@ export const Navigation = styled.nav`
   padding-bottom: 20px;
   padding-left: 7%;
   padding-right: 30%;
-  margin-left: 8%;
-  margin-right: 8%;
+  margin-left: 0%;
+  margin-right: 0%;
 
   a {
     text-decoration: none;
@@ -72,4 +73,98 @@ export const Navigation = styled.nav`
       color: #ffffff;
     }
   }
+`;
+
+export const Divulgation = styled.section`
+  margin-top: 10px;
+  display: flex;
+  height: 50%;
+  width: 100%;
+  justify-content: center;
+  img {
+    flex: 1;
+    width: 95%;
+    height: 50vh;
+    max-width: 1450px;
+  }
+`;
+
+export const Content = styled.main`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 0 5%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+
+export const Product = styled.div`
+  width: 30%;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 5%;
+  padding: 2% 2%;
+
+  border-radius: 4%;
+
+  transition: box-shadow 1s;
+
+  &:hover {
+    box-shadow: 2px 2px 2px 2px ${shade(0.2, '#f4ede8')};
+  }
+  img {
+    background: transparent;
+    text-align: center;
+  }
+  h1 {
+    text-align: left;
+    margin: 5% 0;
+  }
+  h2 {
+    text-align: left;
+  }
+  p {
+    text-align: left;
+  }
+
+  div {
+    &:hover {
+      color: #3b92cc;
+      cursor: pointer;
+    }
+  }
+`;
+
+export const Partnerships = styled.section`
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+
+  h1 {
+    font-size: 30px;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
+  }
+
+  img {
+    margin: 5% 0;
+    border-radius: 50%;
+  }
+`;
+
+export const Footer = styled.footer`
+  background-color: #ffffff;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
