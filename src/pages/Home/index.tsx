@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { BiSearchAlt2 } from 'react-icons/bi';
+import { BiSearchAlt2, BiMenu } from 'react-icons/bi';
 import { TiShoppingCart } from 'react-icons/ti';
 import { BsPeopleCircle } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
 import {
   Header,
   Form,
@@ -18,25 +19,55 @@ import {
 import logoTest from '../../assets/logoTest.jpg';
 
 const Home: React.FC = () => {
+  const [menuClick, setmenuClick] = useState(false);
   return (
     <>
-      <Header>
+      <Header hasClick={!!menuClick}>
         <img src={logoTest} alt="Logo da Loja" />
         <Form>
           <input placeholder="Buscar produtos, marcas, lojas e muito mais..." />
           <button type="submit">
-            <BiSearchAlt2 size={25} />
+            <BiSearchAlt2 size={25} color="#3B92CC" />
           </button>
         </Form>
-        <button type="button">
-          <TiShoppingCart size={25} color="#3B92CC" />
-        </button>
-        <button type="button">
-          <BsPeopleCircle size={25} color="#3B92CC" />
-          <span>Login</span>
-        </button>
+        <div className="interations">
+          <button type="button" className="cart">
+            <TiShoppingCart size={25} color="#3B92CC" />
+          </button>
+          <button type="button" className="user">
+            <BsPeopleCircle size={25} color="#3B92CC" />
+            <span>Login</span>
+          </button>
+          <button
+            type="button"
+            className="nav"
+            onClick={() => {
+              setmenuClick(!menuClick);
+            }}
+          >
+            <BiMenu size={25} color="#3B92CC" className="menu" />
+            <AiOutlineClose size={25} color="#3B92CC" className="close" />
+          </button>
+        </div>
       </Header>
-      <Navigation>
+      <Navigation className="navigation" hasClick={!!menuClick}>
+        <div className="mobile">
+          <div className="head">
+            <BsPeopleCircle size={50} color="#3B92CC" />
+            <div className="text">
+              <h1>Bem-vindo</h1>
+              <p>Entre na sua conta para ver suas compras, favoritos, etc</p>
+            </div>
+          </div>
+          <div className="buttons">
+            <button type="button">
+              <Link to="/">Entre</Link>
+            </button>
+            <button type="button">
+              <Link to="/">Crie sua conta</Link>
+            </button>
+          </div>
+        </div>
         <Link to="/">HOME</Link>
         <Link to="/">CATEGORIAS</Link>
         <Link to="/">PROMOÇÕES</Link>
@@ -45,10 +76,20 @@ const Home: React.FC = () => {
         <Link to="/">SOBRE</Link>
       </Navigation>
       <Divulgation>
-        <img
-          src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1607665355698-home-sliderdesktop.jpg"
-          alt="Propaganda"
-        />
+        <figure>
+          <img
+            src="https://http2.mlstatic.com/storage/splinter-admin/o:f_webp,q_auto:best/1607665355698-home-sliderdesktop.jpg"
+            alt="Propaganda"
+          />
+          <img
+            src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mlb-home-desktop-slider-picture-23d6f3b0-34bf-450a-8022-0e67855da4fe.jpg"
+            alt="Propaganda"
+          />
+          <img
+            src="https://http2.mlstatic.com/optimize/o:f_webp/resources/deals/exhibitors_resources/mlb-home-desktop-slider-picture-da53a385-3b5e-4b0f-975a-2af689fee339.jpg"
+            alt="Propaganda"
+          />
+        </figure>
       </Divulgation>
       <Content>
         <Product>
